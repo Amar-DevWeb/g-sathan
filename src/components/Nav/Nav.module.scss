@@ -11,10 +11,29 @@ nav {
   background-color: var(--grey-text);
   border-radius: 40px;
   box-shadow: 0px 4px 0px var(--black);
+  overflow: hidden;
 }
 
 .links {
   color: var(--black);
   font-size: 1.1rem;
   font-weight: 500;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.links:hover:before{
+  width: 100%;
+}
+.links::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--red);
+  transition: width 0.25s ease-in;
 }
