@@ -1,0 +1,32 @@
+.allHome {
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../assets/images/exemple_travail_2.webp) center/cover no-repeat;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // overflow: hidden;
+  padding-top: 140px;
+}
+
+.bloc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.img {
+  width: 375px;
+  // background: content-box url(../../assets/images/logo_long.webp) center/100vw no-repeat;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.6rem;
+  width: 100%;
+}

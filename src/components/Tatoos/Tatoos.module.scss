@@ -1,0 +1,14 @@
+.allTatoos {
+  height: 100vh;
+  overflow: visible;
+}
+
+.waveRelative {
+  position: relative;
+}
+
+.waveFixed {
+  position: absolute;
+  bottom: 0%;
+  fill: var(--grey-var-1);
+}

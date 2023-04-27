@@ -1,5 +1,7 @@
+import React from "react";
 import Nav from "./components/Nav/Nav.js";
-import Slide1 from "./components/Slide1/Slide1.js";
+import Home from "./components/Home/Home.js";
+import Tatoos from "./components/Tatoos/Tatoos.js";
 import "./App.scss";
 import "./assets/styles/index.scss";
 
@@ -7,9 +9,10 @@ export default function App() {
   return (
     <main>
       {/* fixed element */}
-      <Nav/>
+      <Nav />
       {/* scroll element */}
-      <Slide1/>
+      <Home />
+      <Tatoos />
     </main>
   );
 }
