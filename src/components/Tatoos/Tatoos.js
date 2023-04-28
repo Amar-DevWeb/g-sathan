@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Tatoos.module.scss";
 import Titre from "../../hook/Title/Title.js"
+import Slider from "../../hook/SliderImage/SliderImage";
 
 export default function Tatoos() {
   return (
@@ -18,6 +19,7 @@ export default function Tatoos() {
       </div>
       {/* flex bloc */}
       <Titre text="Artwork tattoos" />
+      <Slider/>
       <div></div>
     </section>
   );
