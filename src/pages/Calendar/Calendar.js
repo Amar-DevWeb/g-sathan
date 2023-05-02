@@ -27,6 +27,16 @@ export default function Calendar() {
           date="Mettre un date de l'event"
           description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
         />
+        <Card
+          className={`${styles.Card}`}
+          date="Mettre un date de l'event"
+          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        <Card
+          className={`${styles.Card}`}
+          date="Mettre un date de l'event"
+          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+        />
       </div>
     </section>
   );
