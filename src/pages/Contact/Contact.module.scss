@@ -1,0 +1,15 @@
+.allContact {
+  height: 100vh;
+  overflow: visible;
+  background-color: var(--grey-var-4);
+}
+
+.waveRelative {
+  position: relative;
+}
+
+.waveFixed {
+  position: absolute;
+  bottom: 0%;
+  fill: var(--grey-var-4);
+}

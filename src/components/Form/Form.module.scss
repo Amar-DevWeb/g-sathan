@@ -1,0 +1,48 @@
+.allForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    background-color: var(--grey-var-1);
+    height: 600px;
+    width: 360px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 0px var(--black);
+    padding: 20px;
+}
+
+.divSelection{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: var(--grey-var-4);
+}
+
+.selection {
+  font-size: 1rem;
+  font-weight: 400;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.selection:hover:before{
+  width: 100%;
+}
+.selection::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--red);
+  transition: width 0.25s ease-in;
+}

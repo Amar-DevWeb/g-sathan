@@ -1,0 +1,44 @@
+.allCalendar {
+  height: 100vh;
+  overflow: visible;
+  background-color: var(--grey-var-3);
+}
+
+.waveRelative {
+  position: relative;
+}
+
+.waveFixed {
+  position: absolute;
+  bottom: 0%;
+  fill: var(--grey-var-3);
+}
+
+.CardScroll {
+  overflow-x: scroll;
+  overflow-y: visible;
+  display: flex;
+  padding-bottom: 5px;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: none;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+  background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: none;
+  border-radius: 0px;
+  border: none;
+}
