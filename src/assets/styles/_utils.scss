@@ -1,0 +1,110 @@
+@use '_variables.scss';
+
+.p-1{
+    padding: 1px;
+}
+
+.p-5{
+    padding: 5px;
+}
+
+.p-10{
+    padding: 10px;
+}
+
+.p-20{
+    padding: 20px;
+}
+
+.p-30{
+    padding: 30px;
+}
+
+.m-5{
+    margin: 5px;
+}
+
+.mr-5{
+    margin-right: 5px;
+}
+
+.m-10{
+    margin: 10px;
+}
+
+.mr-15{
+    margin-right: 15px;
+}
+
+.m-20{
+    margin: 20px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.my-30{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.overflow-h{
+    overflow: hidden;
+}
+.pos-r{
+    position: relative;
+}
+
+.pos-a{
+    position: absolute;
+}
+
+.inset-0{
+    inset: 0;
+}
+
+.border-radius-100{
+    border-radius: 100%;
+}
+
+.border-none{
+    border: none;
+}
+
+.stroke-grey-var-1{
+ stroke: var(--grey-var-1);
+}
+.stroke-grey-var-2{
+ stroke: var(--grey-var-2);
+}
+.stroke-grey-var-3{
+ stroke: var(--grey-var-3);
+}
+.stroke-grey-var-4{
+ stroke: var(--grey-var-4);
+}
+.stroke-grey-text{
+ stroke: var(--grey-text);
+}
+.stroke-black{
+ stroke: var(--black);
+}
+.stroke-white{
+ stroke: var(--white);
+}
+.stroke-red{
+ stroke: var(--red);
+}
+
+.bgc-grey-white{
+    background-color: var(--white);
+}
+
+.hover-red:hover{
+    stroke: var(--red);
+}
+
+.transition{
+    transition: ease-out 0.5s;
+}

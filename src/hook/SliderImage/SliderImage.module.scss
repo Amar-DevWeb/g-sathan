@@ -1,0 +1,37 @@
+.allSlider {
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0px 4px 0px var(--black);
+}
+
+.Slide {
+  display: flex;
+  transition: 0.5s ease-out;
+}
+
+.divBtn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+}
+
+.btn {
+  padding: 3px;
+  border-radius: 100%;
+  background-color: var(--white);
+  border: none;
+}
+
+.btnArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  stroke: var(--grey-var-2);
+  &:hover {
+    stroke: var(--red);
+  }
+}

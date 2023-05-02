@@ -1,9 +1,12 @@
 import React from "react";
 import styles from "./Tatoos.module.scss";
-import Titre from "../../hook/Title/Title.js"
+import Titre from "../../hook/Title/Title.js";
 import Slider from "../../hook/SliderImage/SliderImage";
+import Image1 from "../../assets/images/illu_arm_1.webp";
+import Image2 from "../../assets/images/illu_back_1.webp";
 
 export default function Tatoos() {
+  const slides = [Image1, Image2];
   return (
     <section className={`${styles.allTatoos}`}>
       {/* absolute Bloc */}
@@ -19,8 +22,15 @@ export default function Tatoos() {
       </div>
       {/* flex bloc */}
       <Titre text="Artwork tattoos" />
-      <Slider/>
-      <div></div>
+      <div className={`${styles.divSlider}`}>
+        <div className={`${styles.Slider}`}>
+          <Slider>
+            {slides.map((s) => (
+              <img src={s} className={`${styles.imgSlide}`} />
+            ))}
+          </Slider>
+        </div>
+      </div>
     </section>
   );
 }
