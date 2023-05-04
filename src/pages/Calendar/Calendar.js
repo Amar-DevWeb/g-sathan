@@ -1,11 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from "./Calendar.module.scss";
 import Titre from "../../components/Title/Title.js";
 import Card from "../../components/Card/Card.js";
 
-export default function Calendar() {
+export default function Calendar({ calendarRef, setVisible }) {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.map((entry) => {
+          entry.isIntersecting && setVisible(3);
+        });
+      },
+      { threshold: 0.51 }
+    );
+    calendarRef.current && observer.observe(calendarRef.current);
+  }, [calendarRef]);
   return (
-    <section className={`${styles.allCalendar}`}>
+    <section className={`${styles.allCalendar}`} ref={calendarRef}>
       <div className={`${styles.waveRelative}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -37,6 +48,32 @@ export default function Calendar() {
           date="Mettre un date de l'event"
           description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
         />
+        <Card
+          className={`${styles.Card}`}
+          date="Mettre un date de l'event"
+          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        <Card
+          className={`${styles.Card}`}
+          date="Mettre un date de l'event"
+          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        <Card
+          className={`${styles.Card}`}
+          date="Mettre un date de l'event"
+          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        <Card
+          className={`${styles.Card}`}
+          date="Mettre un date de l'event"
+          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        <Card
+          className={`${styles.Card}`}
+          date="Mettre un date de l'event"
+          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        
       </div>
     </section>
   );

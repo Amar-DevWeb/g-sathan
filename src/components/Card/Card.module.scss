@@ -4,10 +4,10 @@
   justify-content: center;
   align-items: center;
   padding-right: 15px;
-  &:first-child{
+  &:first-child {
     padding-left: 15px;
   }
-  &:last-child{
+  &:last-child {
     padding-right: 0;
   }
 }
@@ -18,8 +18,6 @@
   background-color: var(--grey-var-1);
   border-radius: 8px;
   width: 360px;
-  display: flex;
-  flex-direction: column;
   height: 600px;
   box-shadow: 0px 4px 0px var(--black);
   overflow: hidden;
@@ -71,8 +69,9 @@
   padding: 16px;
   padding-left: 24px;
   padding-right: 24px;
-  &:hover{
-    background-color: var(--grey-var-3);
-    color: var(--red);
-  }
+}
+
+.btn:hover {
+  background-color: var(--grey-var-3);
+  color: var(--red);
 }

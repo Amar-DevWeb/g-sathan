@@ -1,14 +1,25 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from "./Tatoos.module.scss";
 import Titre from "../../components/Title/Title.js";
 import Slider from "../../components/SliderImage/SliderImage.js";
 import Image1 from "../../assets/images/illu_arm_1.webp";
 import Image2 from "../../assets/images/illu_back_1.webp";
 
-export default function Tatoos() {
+export default function Tatoos({ tatoosRef, setVisible }) {
   const slides = [Image1, Image2];
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.map((entry) => {
+          entry.isIntersecting && setVisible(2);
+        });
+      },
+      { threshold: 0.51 }
+    );
+    tatoosRef.current && observer.observe(tatoosRef.current);
+  }, [tatoosRef]);
   return (
-    <section className={`${styles.allTatoos}`}>
+    <section className={`${styles.allTatoos}`} ref={tatoosRef}>
       {/* absolute Bloc */}
       <div className={`${styles.waveRelative}`}>
         <svg
@@ -25,7 +36,7 @@ export default function Tatoos() {
         <div className={`${styles.Slider}`}>
           <Slider>
             {slides.map((s) => (
-              <img src={s} className={`${styles.imgSlide}`} />
+              <img src={s} className={`${styles.imgSlide}`} alt="image" />
             ))}
           </Slider>
         </div>

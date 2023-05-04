@@ -1,11 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from "./Contact.module.scss";
 import Titre from "../../components/Title/Title.js";
 import Form from "../../components/Form/Form";
 
-export default function Contact() {
+export default function Contact({ contactRef, setVisible }) {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.map((entry) => {
+          entry.isIntersecting && setVisible(4);
+        });
+      },
+      { threshold: 0.51 }
+    );
+    contactRef.current && observer.observe(contactRef.current);
+  }, [contactRef]);
   return (
-    <section className={`${styles.allContact}`}>
+    <section className={`${styles.allContact}`} ref={contactRef}>
       <div className={`${styles.waveRelative}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +27,7 @@ export default function Contact() {
         </svg>
       </div>
       <Titre text="Contact" />
-      <Form/>
+      <Form />
     </section>
   );
 }

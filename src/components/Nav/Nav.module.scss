@@ -38,3 +38,10 @@ nav {
   background-color: var(--red);
   transition: width 0.25s ease-in;
 }
+
+.active{
+  font-weight: 600;
+  &::before{
+  width: 100%;
+  }
+}
