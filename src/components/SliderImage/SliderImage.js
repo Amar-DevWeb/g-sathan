@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import styles from "./SliderImage.module.scss";
 
-export default function Carousel({
+export default function SliderImage({
   children: slides,
-  autoSlide = false,
-  autoSlideInterval = 3000,
+  autoSlide = true,
+  autoSlideInterval = 8000,
 }) {
   const [curr, setCurr] = useState(0);
 
@@ -21,20 +21,24 @@ export default function Carousel({
     return () => clearInterval(slideInterval);
   }, []);
   return (
-    <div className={`${styles.allSlider}`}>
-      <div
-        className={`${styles.Slide}`}
-        style={{ transform: `translateX(-${curr * 135}%)` }}
-      >
-        {slides}
-      </div>
-      <div className={`${styles.divBtn}`}>
-        <button onClick={prev} className={`${styles.btn}`}>
-          <ChevronLeft className={`${styles.btnArrow}`} size={40} />
-        </button>
-        <button onClick={next} className={`${styles.btn}`}>
-          <ChevronRight className={`${styles.btnArrow}`} size={40} />
-        </button>
+    <div className={`${styles.divSlider}`}>
+      <div className={`${styles.Slider}`}>
+        <div className={`${styles.allSlider}`}>
+          <div
+            className={`${styles.Slide}`}
+            style={{ transform: `translateX(-${curr * 150}%)` }}
+          >
+            {slides}
+          </div>
+          <div className={`${styles.divBtn}`}>
+            <button onClick={prev} className={`${styles.btn}`}>
+              <ChevronLeft className={`${styles.btnArrow}`} size={40} />
+            </button>
+            <button onClick={next} className={`${styles.btn}`}>
+              <ChevronRight className={`${styles.btnArrow}`} size={40} />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,13 @@
 .allContact {
-  height: 100vh;
+  min-height: 100vh;
   overflow: visible;
   background-color: var(--grey-var-4);
+  z-index: 4;
 }
 
 .waveRelative {
   position: relative;
+  z-index: 4;
 }
 
 .waveFixed {

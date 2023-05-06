@@ -1,10 +1,15 @@
-*, ::after, ::before{
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: var(--grey-text);
 }
 
-body{
+body {
   background-color: var(--grey-var-1);
+}
+html {
+  min-width: 360px;
 }

@@ -1,15 +1,17 @@
 .allTatoos {
-  height: 100vh;
+  min-height: 100vh;
   overflow: visible;
+  z-index: 2;
 }
 
 .waveRelative {
   position: relative;
+  z-index: 2;
 }
 
 .waveFixed {
   position: absolute;
-  bottom: 0%;
+  bottom: 0;
   fill: var(--grey-var-1);
 }
 
@@ -17,13 +19,13 @@
   height: 600px;
 }
 
-.divSlider{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
+// .divSlider{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+// }
 
-.Slider{
-  width: 360px;
-}
+// .Slider{
+//   width: 360px;
+// }

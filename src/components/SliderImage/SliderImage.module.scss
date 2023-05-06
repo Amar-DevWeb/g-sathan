@@ -27,11 +27,22 @@
 }
 
 .btnArrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   stroke: var(--grey-var-2);
   &:hover {
     stroke: var(--red);
   }
+}
+
+.divSlider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Slider{
+  width: 360px;
 }

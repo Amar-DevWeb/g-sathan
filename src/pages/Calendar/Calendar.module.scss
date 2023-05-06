@@ -1,11 +1,13 @@
 .allCalendar {
-  height: 100vh;
+  min-height: 100vh;
   overflow: visible;
   background-color: var(--grey-var-3);
+  z-index: 3;
 }
 
 .waveRelative {
   position: relative;
+  z-index: 3;
 }
 
 .waveFixed {

@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import styles from "./Tatoos.module.scss";
 import Titre from "../../components/Title/Title.js";
-import Slider from "../../components/SliderImage/SliderImage.js";
+import SliderImage from "../../components/SliderImage/SliderImage.js";
 import Image1 from "../../assets/images/illu_arm_1.webp";
 import Image2 from "../../assets/images/illu_back_1.webp";
 
@@ -32,15 +32,11 @@ export default function Tatoos({ tatoosRef, setVisible }) {
       </div>
       {/* flex bloc */}
       <Titre text="Artwork tattoos" />
-      <div className={`${styles.divSlider}`}>
-        <div className={`${styles.Slider}`}>
-          <Slider>
+          <SliderImage>
             {slides.map((s) => (
               <img src={s} className={`${styles.imgSlide}`} alt="image" />
             ))}
-          </Slider>
-        </div>
-      </div>
+          </SliderImage>
     </section>
   );
 }

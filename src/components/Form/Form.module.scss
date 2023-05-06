@@ -7,7 +7,8 @@
 
 .form{
     background-color: var(--grey-var-1);
-    height: 600px;
+    min-height: auto;
+    // height: 600px;
     width: 360px;
     border-radius: 8px;
     box-shadow: 0px 4px 0px var(--black);
@@ -62,6 +63,7 @@
 
 .itemLabel{
   width: 100%;
+  padding-top: 15px;
 }
 
 .itemInput{
@@ -79,13 +81,16 @@
 
 .itemInputDescription{
   background-color: transparent;
-  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 125px;
   height: auto;
   padding: 5px;
   border: var(--grey-var-4) solid 3px;
+  margin-bottom: 15px;
   border-radius: 8px;
+  resize: vertical;
   &::placeholder{
-    letter-spacing: 0.5px;
     color: var(--grey-text);
     opacity: 0.6;
   }
@@ -104,8 +109,8 @@
   border-radius: 40px;
   font-weight: 500;
   font-size: 1rem;
-  height: 49px;
-  width: 159px;
+  height: 50px;
+  width: 160px;
   &:hover{
     background-color: var(--grey-var-3);
     color: var(--red);

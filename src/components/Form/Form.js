@@ -20,7 +20,7 @@ export default function Form() {
               required
             />
           </label>
-          <label>
+          <label className={`${styles.itemLabel}`}>
             <p className={`${styles.itemTitle}`}>Firt name</p>
             <input
               type="text"
@@ -30,7 +30,7 @@ export default function Form() {
               required
             />
           </label>
-          <label>
+          <label className={`${styles.itemLabel}`}>
             <p className={`${styles.itemTitle}`}>Last name</p>
             <input
               type="text"
@@ -40,12 +40,13 @@ export default function Form() {
               required
             />
           </label>
-          <label>
+          <label className={`${styles.itemLabel}`}>
             <p className={`${styles.itemTitle}`} required>
               Description
             </p>
             <textarea
-              placeholder="Hello,I tell you for..."
+              placeholder=" Hello,
+              I tell you for..."
               className={`${styles.itemInputDescription}`}
             ></textarea>
           </label>
