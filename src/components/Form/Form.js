@@ -17,7 +17,7 @@ export default function Form() {
               handelClick(1);
             }}
             className={`${styles.selection} ${
-              id === 2 ? "active" : `${styles.active}`
+              id === 1 && `${styles.active}`
             }`}
           >
             Private
@@ -27,7 +27,7 @@ export default function Form() {
               handelClick(2);
             }}
             className={`${styles.selection} ${
-              id === 1 ? "active" : `${styles.active}`
+              id === 2 && `${styles.active}`
             }`}
           >
             Professional

@@ -51,15 +51,5 @@
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 0px;
-}
-
-*::-webkit-scrollbar-track {
-  background: none;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: none;
-  border-radius: 0px;
-  border: none;
+  display: none;
 }

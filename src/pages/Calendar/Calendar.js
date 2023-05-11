@@ -44,6 +44,26 @@ export default function Calendar({ calendarRef, setVisible }) {
           date="Mettre une date de l'event"
           description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
         />
+        <Card
+          className={`${styles.Card}`}
+          date="Mettre une date de l'event"
+          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        <Card
+          className={`${styles.Card}`}
+          date="Mettre une date de l'event"
+          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        <Card
+          className={`${styles.Card}`}
+          date="Mettre une date de l'event"
+          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        <Card
+          className={`${styles.Card}`}
+          date="Mettre une date de l'event"
+          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+        />
       </div>
     </section>
   );

@@ -25,3 +25,9 @@
   //   display: none;
   // }
 }
+
+@media screen and (max-height: 845px){
+  .allContact{
+    min-height: 110vh;
+  }
+}

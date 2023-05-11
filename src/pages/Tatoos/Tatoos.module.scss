@@ -15,13 +15,18 @@
   fill: var(--grey-var-1);
 }
 
-.imgSlide{
+.imgSlide {
   height: 600px;
 }
 
-@media screen and (min-width : 600px){
-  .waveFixed{
+@media screen and (min-width: 600px) {
+  .waveFixed {
     bottom: -10px;
   }
+}
 
+@media screen and (max-height: 800px){
+  .allTatoos{
+    min-height: 120vh;
+  }
 }
