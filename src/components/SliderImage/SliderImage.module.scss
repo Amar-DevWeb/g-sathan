@@ -36,13 +36,22 @@
   }
 }
 
-.divSlider{
+.divSlider {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.Slider{
+.Slider {
   width: 360px;
+}
+
+@media screen and (min-width: 600px) {
+  .allSlider {
+    border-radius: 15px;
+  }
+  .Slider {
+    width: 400px;
+  }
 }

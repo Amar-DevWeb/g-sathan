@@ -116,3 +116,19 @@
     color: var(--red);
   }
 }
+
+.active{
+  font-weight: 500;
+  &::before{
+  width: 100%;
+  }
+}
+
+@media screen and (min-width : 1024px){
+  .form{
+    width: 450px;
+  }
+  .selection{
+    font-size: 1.05rem;
+  }
+}

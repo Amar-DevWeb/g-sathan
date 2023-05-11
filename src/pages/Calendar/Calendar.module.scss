@@ -23,6 +23,25 @@
   padding-bottom: 5px;
 }
 
+@media screen and (min-width : 600px){
+  .waveFixed{
+    bottom: -10px;
+
+  }
+  // .waveRelative{
+  //   display: none;
+  // }
+}
+
+@media screen and (min-width : 1024px){
+  .CardScroll{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 20%;
+  }
+}
+
+
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
