@@ -26,7 +26,7 @@ export default function SliderImage({
         <div className={`${styles.allSlider}`}>
           <div
             className={`${styles.Slide}`}
-            style={{ transform: `translateX(-${curr * 150}%)` }}
+            style={{ transform: `translateX(-${curr * 130}%)` }}
           >
             {slides}
           </div>

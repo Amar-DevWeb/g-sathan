@@ -16,18 +16,22 @@
   fill: var(--grey-var-4);
 }
 
-@media screen and (min-width : 600px){
-  .waveFixed{
+@media screen and (min-width: 600px) {
+  .waveFixed {
     bottom: -10px;
-
   }
   // .waveRelative{
   //   display: none;
   // }
 }
 
-@media screen and (max-height: 845px){
-  .allContact{
+@media screen and (max-height: 845px) {
+  .allContact {
     min-height: 110vh;
+  }
+}
+@media screen and (max-height: 720px) {
+  .allContact {
+    min-height: 130vh;
   }
 }

@@ -13,7 +13,6 @@
 }
 
 .Card {
-  
   display: flex;
   flex-direction: column;
   background-color: var(--grey-var-1);
@@ -77,9 +76,19 @@
   color: var(--red);
 }
 
-@media screen and (min-width : 1024px){
-  .allCard{
+@media screen and (min-width: 1024px) {
+  .allCard {
     padding-right: 0;
     padding-bottom: 15px;
+    &:first-child {
+      padding-left: 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .allCard {
+    padding-bottom: 30px;
+    width: 33%;
   }
 }

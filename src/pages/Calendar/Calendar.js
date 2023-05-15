@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import styles from "./Calendar.module.scss";
 import Titre from "../../components/Title/Title.js";
 import Card from "../../components/Card/Card.js";
@@ -15,7 +15,6 @@ export default function Calendar({ calendarRef, setVisible }) {
     );
     calendarRef.current && observer.observe(calendarRef.current);
   }, [calendarRef]);
-  const [status, setStatus] = useState(true);
   return (
     <section className={`${styles.allCalendar}`} ref={calendarRef}>
       <div className={`${styles.waveRelative}`}>
@@ -28,21 +27,30 @@ export default function Calendar({ calendarRef, setVisible }) {
         </svg>
       </div>
       <Titre text="Calendar" />
-      <div className={`${styles.CardScroll}`}>
+      <div className={`${styles.CardScroll}`} itemID="test">
         <Card
-          className={`${styles.Card}`}
-          date="Mettre une date de l'event"
-          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+          date="Mettre une date pour l'event"
+          description="Mettre une description pour l'event ou une description du gess qui vient au salon de tatoos"
         />
         <Card
-          className={`${styles.Card}`}
           date="Mettre une date de l'event"
-          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+          description="Mettre une description pour l'event ou une description du gess qui vient au salon de tatoos"
         />
         <Card
-          className={`${styles.Card}`}
-          date="Mettre une date de l'event"
-          description="Mettre du description de l'event ou une description du gess qui vient au salon de tatoos"
+          date="Mettre une date pour l'event"
+          description="Mettre une description pour l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        <Card
+          date="Mettre une date pour l'event"
+          description="Mettre une description pour l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        <Card
+          date="Mettre une date pour l'event"
+          description="Mettre une description pour l'event ou une description du gess qui vient au salon de tatoos"
+        />
+        <Card
+          date="Mettre une date pour l'event"
+          description="Mettre une description pour l'event ou une description du gess qui vient au salon de tatoos"
         />
       </div>
     </section>

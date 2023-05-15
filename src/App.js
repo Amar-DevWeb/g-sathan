@@ -8,7 +8,7 @@ import "./App.scss";
 import "./assets/styles/index.scss";
 
 export default function App() {
-  const homeRef = useRef(null)
+  const homeRef = useRef(null);
   const tatoosRef = useRef(null);
   const calendarRef = useRef(null);
   const contactRef = useRef(null);

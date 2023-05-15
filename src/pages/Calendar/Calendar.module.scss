@@ -3,6 +3,7 @@
   overflow: visible;
   background-color: var(--grey-var-3);
   z-index: 3;
+  padding-bottom: 15%;
 }
 
 .waveRelative {
@@ -23,24 +24,45 @@
   padding-bottom: 5px;
 }
 
-@media screen and (min-width : 600px){
-  .waveFixed{
-    bottom: -10px;
-
-  }
-  // .waveRelative{
-  //   display: none;
-  // }
+.divBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (min-width : 1024px){
-  .CardScroll{
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  font-weight: 600;
+  font-size: 1rem;
+  width: 160px;
+  height: 48px;
+  border-radius: 40px;
+  border: none;
+  padding: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  &:hover {
+    background-color: var(--grey-var-1);
+    color: var(--red);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .waveFixed {
+    bottom: -10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .CardScroll {
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-bottom: 20%;
   }
 }
-
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
