@@ -1,14 +1,16 @@
 import React from "react";
 import ImgWork from "../../assets/images/exemple_travail_1.webp";
 import styles from "./Card.module.scss";
-export default function Card({
-  description,
-  date,
-}) {
+export default function Card({ description, date }) {
   return (
     <section className={`${styles.allCard}`}>
       <section className={`${styles.Card}`}>
-        <img src={ImgWork} alt={ImgWork} className={`${styles.Img}`} />
+        <img
+          src={ImgWork}
+          alt={ImgWork}
+          className={`${styles.Img}`}
+          key={crypto.randomUUID()}
+        />
         <div className={`${styles.allDescription}`}>
           <h2 className={`${styles.date}`}>{date}</h2>
           <p className={`${styles.description}`}>{description}</p>

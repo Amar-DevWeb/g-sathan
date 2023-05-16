@@ -1,8 +1,30 @@
-import React, {useState} from "react";
+import React, { useRef, useState } from "react";
 import styles from "./Form.module.scss";
+import emailjs from "@emailjs/browser";
 
 export default function Form() {
   const [id, setid] = useState(0);
+  const form = useRef()
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+      e.target.reset()
+  };
 
   const handelClick = (index) => {
     setid(index);
@@ -10,29 +32,53 @@ export default function Form() {
 
   return (
     <section className={`${styles.allForm}`}>
-      <form className={`${styles.form}`}>
+      <form className={`${styles.form}`} ref={form} onSubmit={sendEmail}>
         <div className={`${styles.divSelection}`}>
-          <p
-            onClick={() => {
-              handelClick(1);
-            }}
-            className={`${styles.selection} ${
-              id === 1 && `${styles.active}`
-            }`}
-          >
-            Private
-          </p>
-          <p
-            onClick={() => {
-              handelClick(2);
-            }}
-            className={`${styles.selection} ${
-              id === 2 && `${styles.active}`
-            }`}
-          >
-            Professional
-          </p>
+          <div>
+            <input
+              type="radio"
+              id="private"
+              name="demande"
+              value="private"
+              className={`${styles.inputButton}`}
+              required
+            />
+            <label
+              for="private"
+              onClick={() => {
+                handelClick(1);
+              }}
+              className={`${styles.selection} ${
+                id === 1 && `${styles.active}`
+              }`}
+            >
+              Private
+            </label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              id="professional"
+              name="demande"
+              value="professional"
+              className={`${styles.inputButton}`}
+              required
+            />
+            <label
+              htmlFor="professional"
+              onClick={() => {
+                handelClick(2);
+              }}
+              className={`${styles.selection} ${
+                id === 2 && `${styles.active}`
+              }`}
+            >
+              Professional
+            </label>
+          </div>
         </div>
+
         <div className={`${styles.description}`}>
           <label className={`${styles.itemLabel}`}>
             <p className={`${styles.itemTitle}`}>Email</p>
@@ -45,7 +91,7 @@ export default function Form() {
             />
           </label>
           <label className={`${styles.itemLabel}`}>
-            <p className={`${styles.itemTitle}`}>Firt name</p>
+            <p className={`${styles.itemTitle}`}>First name</p>
             <input
               type="text"
               name="firtName"
@@ -71,6 +117,7 @@ export default function Form() {
             <textarea
               placeholder=" Hello,
               I tell you for..."
+              name="message"
               className={`${styles.itemInputDescription}`}
             ></textarea>
           </label>

@@ -48,6 +48,10 @@
   transition: width 0.25s ease-in;
 }
 
+.inputButton{
+  display: none;
+}
+
 .description{
   display: flex;
   flex-direction: column;

@@ -38,7 +38,7 @@ export default function Calendar({ calendarRef, setVisible }) {
         />
         <Card
           date="Mettre une date pour l'event"
-          description="Mettre une description pour l'event ou une description du gess qui vient au salon de tatoos"
+          description="Mettre une description pour l'event ou une description du gess qui vient au salon de tatoos" 
         />
         <Card
           date="Mettre une date pour l'event"
